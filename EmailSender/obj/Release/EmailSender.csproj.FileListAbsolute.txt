@@ -1,0 +1,7 @@
+D:\Persnol\Work\Utilities\EmailSender\bin\Release\EmailSender.dll
+D:\Persnol\Work\Utilities\EmailSender\bin\Release\EmailSender.pdb
+D:\Persnol\Work\Utilities\EmailSender\bin\Release\LogWriter.dll
+D:\Persnol\Work\Utilities\EmailSender\bin\Release\LogWriter.pdb
+D:\Persnol\Work\Utilities\EmailSender\obj\Release\EmailSender.csprojResolveAssemblyReference.cache
+D:\Persnol\Work\Utilities\EmailSender\obj\Release\EmailSender.dll
+D:\Persnol\Work\Utilities\EmailSender\obj\Release\EmailSender.pdb

@@ -1,0 +1,5 @@
+D:\Persnol\Work\Utilities\LogWriter\bin\Release\LogWriter.dll
+D:\Persnol\Work\Utilities\LogWriter\bin\Release\LogWriter.pdb
+D:\Persnol\Work\Utilities\LogWriter\obj\Release\LogWriter.csprojResolveAssemblyReference.cache
+D:\Persnol\Work\Utilities\LogWriter\obj\Release\LogWriter.dll
+D:\Persnol\Work\Utilities\LogWriter\obj\Release\LogWriter.pdb
