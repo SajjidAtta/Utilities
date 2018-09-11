@@ -16,7 +16,15 @@ namespace LogWriter
         static Logger instance;
         private Logger()
         {
-            LogFile = Path.GetFullPath((System.Configuration.ConfigurationManager.AppSettings["LogFilePath"]));
+            try
+            {
+                LogFile = Path.GetFullPath((System.Configuration.ConfigurationManager.AppSettings["LogFilePath"]));
+            }
+            catch
+            {
+                string fullPath = System.Reflection.Assembly.GetAssembly(typeof(Logger)).Location;
+                LogFile= Path.GetDirectoryName(fullPath)+"LogFile.txt";
+            }
         }
         public static Logger Instance
         {
