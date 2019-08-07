@@ -53,7 +53,7 @@ namespace EmailSender
             }
             catch (Exception exp)
             {
-                Logger.Instance.Log(Logger.MessageType.ERROR, "Cofig File Reading Error: {0}", exp.Message);
+                Logger.Instance.Log(Logger.MessageType.ERR, "Cofig File Reading Error: {0}", exp.Message);
 
             }
 
@@ -75,7 +75,7 @@ namespace EmailSender
             }
             catch (Exception exp)
             {
-                Logger.Instance.Log(Logger.MessageType.ERROR, "SMTP Intialization Error: {0}", exp.Message);
+                Logger.Instance.Log(Logger.MessageType.ERR, "SMTP Intialization Error: {0}", exp.Message);
 
             }
 
@@ -103,7 +103,7 @@ namespace EmailSender
             }
             catch (Exception exp)
             {
-                Logger.Instance.Log(Logger.MessageType.ERROR, "Message Creation Error: {0}", exp.Message);
+                Logger.Instance.Log(Logger.MessageType.ERR, "Message Creation Error: {0}", exp.Message);
 
             }
         }
@@ -119,7 +119,7 @@ namespace EmailSender
             }
             catch (Exception exp)
             {
-                Logger.Instance.Log(Logger.MessageType.ERROR, "Message Sending Error: {0}", exp.Message);
+                Logger.Instance.Log(Logger.MessageType.ERR, "Message Sending Error: {0}", exp.Message);
 
             }
 

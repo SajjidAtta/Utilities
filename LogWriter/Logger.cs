@@ -11,7 +11,8 @@ namespace LogWriter
     {
         //#TODO:Log Error to windows events
         
-        public enum MessageType { DEBUG, INF, ERROR };
+        public enum MessageType { DBG, INF, ERR };
+        public bool DoConsoleLog;
         string LogFile;
         static Logger instance;
         private Logger()
@@ -23,9 +24,11 @@ namespace LogWriter
             catch
             {
                 string fullPath = System.Reflection.Assembly.GetAssembly(typeof(Logger)).Location;
-                LogFile= Path.GetDirectoryName(fullPath)+"LogFile.txt";
+                LogFile= Path.GetDirectoryName(fullPath)+"\\LogFile.txt";
             }
+            DoConsoleLog = false;
         }
+
         public static Logger Instance
         {
             get
@@ -37,9 +40,10 @@ namespace LogWriter
         }
         public void Log(MessageType msgtype, string msg, params string[] values)
         {
-
+            if (DoConsoleLog)
+                Console.WriteLine(String.Format(msg.ToString(), values));
             msg = String.Format("{0} -- [{1}] -- {2}", System.DateTime.Now, msgtype.ToString(), String.Format(msg.ToString(), values));
-
+            
 
             try
             {
@@ -93,14 +97,14 @@ namespace LogWriter
         {
             //#TODO: Reflections related Work for Method Names
             String MethodName = "SomeName";
-            Log(MessageType.DEBUG, "Method Start: {0}", MethodName);
+            Log(MessageType.DBG, "Method Start: {0}", MethodName);
 
         }
         public void LogMethodEnd()
         {
             //#TODO: Reflections related Work for Method Names
             String MethodName = "SomeName";
-            Log(MessageType.DEBUG, "Method End: {0}", MethodName);
+            Log(MessageType.DBG, "Method End: {0}", MethodName);
         }
     }
 }
